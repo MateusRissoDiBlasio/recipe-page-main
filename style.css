@@ -1,0 +1,353 @@
+body{
+    margin: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Outfit", sans-serif;
+    color: hsl(30, 10%, 34%);
+    h1{
+        font-size: 36px;
+        font-weight: 500;
+        font-family: "Young Serif", serif;
+        color: hsl(24, 5%, 18%);
+    }
+    h2{
+        font-family: "Young Serif", serif;
+        font-weight: 500;
+        font-size: 28px;
+        color: hsl(14, 45%, 36%);
+    }
+    p{
+        font-size: 16px;
+        line-height: 25px;
+        padding: 0 10px 0 0;
+    }
+    img{
+        width: 375px;
+    }
+
+    section{
+        padding: 0px 22px 0px 30px;
+        ul{
+            margin: 0;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            /* border-bottom: solid 1px hsl(30, 18%, 87%); */
+        }
+    }
+}
+
+.recipe{
+
+    h3{
+        color: hsl(332, 51%, 32%);
+        margin: 0;
+        margin-top: 50px;
+        padding-left: 20px;
+    }
+    
+    ul{
+        line-height: 25px;
+        padding-right: 30px;
+        ::marker{
+            color: hsl(332, 51%, 32%);
+            font-size: 12px;
+        }
+        li{
+            padding: 0px 15px;
+            color: hsl(30, 10%, 34%);
+            margin-bottom: 10px;
+        }
+        span{
+            position: relative;
+            top: -10px;
+        }
+        li:first-child{
+            margin-bottom: 0;
+        }
+        
+    }
+}
+
+.ingredients{
+    ul{
+        padding: 0px 20px;
+        padding-bottom: 20px;
+        border-bottom: solid 1px hsl(30, 18%, 87%);
+        ::marker{
+            color: hsl(14, 45%, 36%);
+            font-size: 12px;
+        }
+        li{
+            padding: 0px 15px;
+            color: hsl(30, 10%, 34%);
+            margin-bottom: 12px;
+        }
+        li:last-child{
+            margin-top: 20px;
+        }
+        span{
+                position: relative;
+                top: -10px;
+            }
+        
+        
+    }
+
+}
+
+.instructions{
+    ol{
+        padding: 0px 0px 0px 20px;
+        padding-bottom: 20px;
+        border-bottom: solid 1px hsl(30, 18%, 87%);
+        margin-bottom: 0;
+        ::marker{
+            color: hsl(14, 45%, 36%);
+            font-weight: 600;
+        }
+        li{
+            padding: 0px 15px;
+            color: hsl(30, 10%, 34%);
+            margin-bottom: 12px;
+            line-height: 25px;
+        }
+    }
+}
+
+.nutrition{
+    p{
+        padding-right: 20px;
+    }
+}
+
+.nutritab{
+    display: grid;
+    grid-template-columns: auto auto;
+    p{
+        padding: 10px 20px;
+        border-bottom: solid 1px hsl(30, 18%, 87%);
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    
+    p:nth-last-child(2), p:last-child{
+        border-bottom: none;
+    }
+    
+    .values{
+        color: hsl(14, 45%, 36%);
+        font-weight: 700;
+    }
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+    padding: 40px 0px;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media (min-width: 381px){
+
+    body{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: hsl(30, 54%, 90%);
+    }
+    main{
+        width: 100vw;
+        background-color: hsl(0, 0%, 100%);
+        img{
+            width: 100vw;
+        }
+    }
+
+    .recipe{
+        padding: 15px;
+        
+        h1{
+            font-size: 36px;
+            margin-bottom: 0;
+        }
+        h3{
+            background-color: hsl(330, 100%, 98%);
+            padding: 30px;
+            padding-bottom: 15px;
+            margin-top: 30px;
+            border-radius: 10px 10px 0 0;
+            font-size: 22px;
+            
+        }
+        ul{
+            background-color: hsl(330, 100%, 98%);
+            border-radius: 0 0 10px 10px;
+            padding: 0 0 20px 55px ;
+
+            li{
+            padding: 0px 10px;
+            color: hsl(30, 10%, 34%);
+            margin-bottom: 5px;
+            }
+            span{
+                position: relative;
+                top: 0px;
+            }
+            li:first-child{
+                margin-bottom: 5px;
+            }
+        }      
+    }
+
+    .ingredients{
+        padding: 0 15px;
+        align-self: flex-start;
+    }
+
+    .instructions{
+        padding: 0 15px;
+        ol{
+            padding: 0px 0px 20px 25px; 
+        }
+    }
+
+    .nutrition{
+        padding: 0;
+        h2{
+            padding: 0 15px;
+        }
+        p{
+            padding: 0 15px;
+        }
+        .nutritab{
+            grid-template-columns: 46vw 46vw;
+            padding: 0 4vw;
+            p{
+                padding: 10px;
+            }
+            p:not(.values){
+                font-weight: 500;
+                text-indent: 15px;
+            }
+            .values{
+                padding-left: 0;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 548px){
+    .ingredients{
+       
+       ul{
+            li:last-child{
+            margin-top: 10px;
+            }
+            span{
+                position: relative;
+                top: 0px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px){
+
+    body{
+        margin: 0;
+        padding: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: hsl(30, 54%, 90%);
+    }
+    main{
+        width: 660px;
+        padding: 35px;
+        padding-bottom: 25px;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 20px;
+        img{
+            width: 660px;
+            border-radius: 10px;
+        }
+    }
+
+    .recipe{
+        padding: 0;
+        
+        h1{
+            font-size: 40px;
+            margin-bottom: 0;
+        }
+        h3{
+            background-color: hsl(330, 100%, 98%);
+            padding: 30px;
+            padding-bottom: 15px;
+            margin-top: 30px;
+            border-radius: 10px 10px 0 0;
+            font-size: 22px;
+            
+        }
+        ul{
+            background-color: hsl(330, 100%, 98%);
+            border-radius: 0 0 10px 10px;
+            padding: 0 0 20px 55px ;
+
+            li{
+            padding: 0px 10px;
+            color: hsl(30, 10%, 34%);
+            margin-bottom: 5px;
+            }
+            span{
+                position: relative;
+                top: 0px;
+            }
+            li:first-child{
+                margin-bottom: 5px;
+            }
+        }      
+    }
+
+    .ingredients{
+        padding: 0;
+        align-self: flex-start;
+        width: inherit;
+    }
+
+    .instructions{
+        padding: 0;
+        ol{
+            padding: 0px 0px 20px 25px; 
+        }
+    }
+
+    .nutrition{
+        padding: 0;
+        width: inherit;
+
+        .nutritab{
+            grid-template-columns: 330px 330px;
+            padding: 0;
+            p{
+                padding: 10px;
+            }
+            p:not(.values){    
+                font-weight: 500;
+                text-indent: 35px;
+            }
+            .values{
+                text-indent: 15px;
+            }
+        }
+    }
+}
